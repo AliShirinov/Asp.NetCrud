@@ -1,0 +1,10 @@
+﻿<form action="/Genre/Add" method="post">
+    @Html.ValidationSummary()
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" name="Name" id="Name"/>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Add" />
+    </div>
+</form>

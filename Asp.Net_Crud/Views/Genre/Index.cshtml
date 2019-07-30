@@ -1,0 +1,28 @@
+﻿@using ASPNetCrudApp.Models;
+@model List<Genre>
+
+<a href="/Genre/Add">Add Genre</a>
+<table class="table table-hover">
+    <thead class="table-dark">
+       <tr>
+           <th>Id</th>
+           <th>Name</th>
+           <th>
+               Edit / Delete
+           </th>
+       </tr>
+    </thead>
+    <tbody>
+        @foreach (var genre in Model)
+        {
+            <tr>
+                <td>@genre.Id</td>
+                <td>@genre.Name</td>
+                <td>
+                    <a href="/Genre/Edit/@genre.Id">Edit / </a>
+                    <a href="/Genre/Delete/@genre.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
